@@ -69,7 +69,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-/* Tabla del carrito */
+
 .shopping-cart {
     max-width: 1200px;
     margin: 2rem auto;
@@ -122,7 +122,7 @@ input[type="number"] {
     background-color: #c82333;
 }
 
-/* Resumen del carrito */
+
 .cart-summary {
     text-align: right;
     margin-top: 2rem;
@@ -150,7 +150,7 @@ input[type="number"] {
     background-color: #218838;
 }
 
-/* Estilos responsivos */
+
 @media (max-width: 768px) {
     .cart-table th, .cart-table td {
         padding: 0.5rem;
@@ -161,7 +161,7 @@ input[type="number"] {
     }
 }
 
-/* Galería deslizante */
+
 .productos-galeria {
     padding: 20px;
     overflow: hidden;
@@ -203,7 +203,6 @@ input[type="number"] {
     transform: scale(1.05);
 }
 
-/* Botones para desplazar la galería */
 .prev, .next {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -229,11 +228,10 @@ input[type="number"] {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Ocultar barra de desplazamiento */
 .galeria::-webkit-scrollbar {
     display: none;
 } 
-/* Estilos para la sección de productos */
+
 .productos {
     padding: 50px;
     background-color: #f5f5f5;
@@ -293,12 +291,11 @@ input[type="number"] {
 }
 
 .agregar-carrito:hover {
-    background-color: #4CAF50; /* Un color más oscuro */
-    transform: scale(1.05); /* Efecto de zoom */
+    background-color: #4CAF50; 
+    transform: scale(1.05); 
     transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Efectos al pasar el cursor sobre los productos */
 .producto:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
@@ -308,7 +305,6 @@ input[type="number"] {
     transform: scale(1.05);
 }
 
-/* Estilos responsive */
 @media (max-width: 768px) {
     .productos-contenedor {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -325,10 +321,10 @@ input[type="number"] {
     }
 }
 .producto a {
-    text-decoration: none; /* Quitar subrayado */
-    color: inherit; /* Heredar el color del texto */
+    text-decoration: none; 
+    color: inherit;
 }
 
 .producto h3, .producto p {
-    margin: 5px 0; /* Espacio entre elementos */
+    margin: 5px 0; 
 }

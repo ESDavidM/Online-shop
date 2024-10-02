@@ -1,23 +1,22 @@
 let carrito = [];
 
-// Función para agregar productos al carrito
+
 function agregarAlCarrito(nombre, precio, descuento = 0) {
     console.log(`Añadiendo al carrito: ${nombre}, $${precio}, Descuento: ${descuento}`);
     const producto = { nombre, precio, descuento };
     carrito.push(producto);
-    localStorage.setItem('carrito', JSON.stringify(carrito)); // Guardar en localStorage
+    localStorage.setItem('carrito', JSON.stringify(carrito)); 
     alert(`${nombre} ha sido añadido al carrito.`);
-    actualizarCarrito(); // Actualizar carrito
-    actualizarEnlaceCarrito(); // Actualizar el número en el enlace del carrito
+    actualizarCarrito(); 
+    actualizarEnlaceCarrito(); 
 }
 
-// Función para actualizar la tabla del carrito
 function actualizarCarrito() {
     const listaCarrito = document.getElementById('lista-carrito');
     const totalElemento = document.getElementById('total');
     if (!listaCarrito || !totalElemento) return;
 
-    listaCarrito.innerHTML = ''; // Limpiar el carrito
+    listaCarrito.innerHTML = ''; 
     let total = 0;
 
     carrito.forEach((producto) => {
@@ -34,31 +33,29 @@ function actualizarCarrito() {
     });
 
     totalElemento.textContent = `Total: $${total.toFixed(2)}`;
-    actualizarEnlaceCarrito(); // Actualizar el número en el enlace del carrito
+    actualizarEnlaceCarrito(); 
 }
 
-// Función para eliminar productos del carrito
 function eliminarProducto(nombre) {
     carrito = carrito.filter(producto => producto.nombre !== nombre);
-    localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizar localStorage
+    localStorage.setItem('carrito', JSON.stringify(carrito)); 
     actualizarCarrito();
-    actualizarEnlaceCarrito(); // Actualizar el número en el enlace del carrito
+    actualizarEnlaceCarrito(); 
 }
 
-// Función para finalizar la compra
+
 function realizarCompra() {
     if (carrito.length === 0) {
         alert("No hay productos en el carrito.");
         return;
     }
     alert("Compra realizada con éxito.");
-    carrito = []; // Vaciar el carrito
-    localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizar localStorage
-    actualizarCarrito(); // Actualizar visualización
-    actualizarEnlaceCarrito(); // Actualizar el número en el enlace del carrito
+    carrito = []; 
+    localStorage.setItem('carrito', JSON.stringify(carrito)); 
+    actualizarCarrito(); 
+    actualizarEnlaceCarrito(); 
 }
 
-// Función para actualizar el enlace del carrito
 function actualizarEnlaceCarrito() {
     const cartLink = document.getElementById('cart-link');
     if (!cartLink) return;
@@ -68,7 +65,6 @@ function actualizarEnlaceCarrito() {
 }
 
 
-    // Asignar evento de compra al botón
     const btnCompra = document.getElementById('btn-compra');
     if (btnCompra) {
         btnCompra.addEventListener('click', realizarCompra);
@@ -77,10 +73,9 @@ function actualizarEnlaceCarrito() {
     document.addEventListener('DOMContentLoaded', function() {
         carrito = JSON.parse(localStorage.getItem('carrito')) || [];
         actualizarCarrito();
-        actualizarEnlaceCarrito(); // Actualizar número de productos en el enlace al cargar la página
+        actualizarEnlaceCarrito(); 
     
-        // Asignar evento a los botones de agregar productos
-        const botonesAgregar = document.querySelectorAll('.agregar-carrito'); // Cambio aquí
+        const botonesAgregar = document.querySelectorAll('.agregar-carrito'); 
         botonesAgregar.forEach((boton) => {
             boton.addEventListener('click', function() {
                 const producto = this.closest('.producto');
@@ -90,7 +85,6 @@ function actualizarEnlaceCarrito() {
             });
         });
     });
-    // Suavizar el desplazamiento al hacer clic en un enlace de la galería
 document.querySelectorAll('.galeria a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
