@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="icon">
+</head>
+<body>
+    <header>
+        <h1>Online Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Galería deslizante de productos -->
+        <section class="productos-galeria">
+            <h2>Productos Destacados</h2>
+            <div class="galeria-container">
+                <button class="prev" onclick="scrollGaleria(-200)">&#10094;</button>
+                <div class="galeria">
+                    <div class="producto">
+                        <a href="productos.html#silla">
+                            <img src="assets/silla.Webp" alt="Silla Moderna">
+                            <h3>Silla Moderna</h3>
+                            <p class="price">$50.00</p>
+                        </a>
+                    </div>
+                    <div class="producto">
+                        <a href="productos.html#mesa">
+                            <img src="assets/comedor.Webp" alt="Mesa de Comedor">
+                            <h3>Mesa de Comedor</h3>
+                            <p class="price">$150.00</p>
+                        </a>
+                    </div>
+                    <div class="producto">
+                        <a href="productos.html#sofa">
+                            <img src="assets/sofa.Webp" alt="Sofá Cómodo">
+                            <h3>Sofá Cómodo</h3>
+                            <p class="price">$250.00</p>
+                        </a>
+                    </div>
+                    <div class="producto">
+                        <a href="productos.html#lampara">
+                            <img src="assets/lampara.Webp" alt="Lámpara de Escritorio">
+                            <h3>Lámpara de Escritorio</h3>
+                            <p class="price">$30.00</p>
+                        </a>
+                    </div>
+                </div>
+                <button class="next" onclick="scrollGaleria(200)">&#10095;</button>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>© 2024 Online Shop</p>
+    </footer>
+
+    <!-- Script para la galería -->
+    <script>
+        function scrollGaleria(distance) {
+            const galeria = document.querySelector('.galeria');
+            galeria.scrollBy({ left: distance, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+

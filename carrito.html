@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Online Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/favicon.ico" type="icon">
+</head>
+<body>
+
+    <!-- Encabezado y navegación -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Online Shop</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="carrito.html" class="active">Carrito</a></li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <a href="carrito.html" id="cart-link">🛒 Carrito (0)</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal: carrito de compras -->
+    <main>
+        <section class="cart">
+            <h2>Tu Carrito de Compras</h2>
+            <table id="lista-carrito" class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se llenará dinámicamente con JavaScript -->
+                </tbody>
+            </table>
+            <div class="cart-summary">
+                <h3 id="total">Total: <strong>$0.00</strong></h3>
+                <button class="checkout-btn" id="btn-compra">Finalizar Compra</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Online Shop. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="js/carrito.js"></script>
+</body>
+</html>
