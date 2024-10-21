@@ -97,4 +97,4 @@ document.querySelectorAll('.galeria a').forEach(anchor => {
     });
 });
 
-
+module.exports = { agregarAlCarrito, eliminarProducto, realizarCompra };
